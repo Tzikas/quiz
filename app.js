@@ -3,6 +3,13 @@ var wrong = new Audio('Wrong-answer.mp3');
 var start = new Audio('Winning-sound-effect.mp3');
 var end = new Audio('5_Sec_Crowd.mp3');
 
+function shuffle(a) {
+    for (let i = a.length; i; i--) {
+        let j = Math.floor(Math.random() * i);
+        [a[i - 1], a[j]] = [a[j], a[i - 1]];
+    }
+}
+
 var state = {
 	questions: [
 	{
@@ -140,6 +147,10 @@ function renderApp(state, elements) {
 	elements[state.route].removeClass('hidden');
 
 	if (state.route === 'start'){
+		console.log(state);		
+		shuffle(state.questions)
+		console.log(state);
+
 		renderStart(state, elements[state.route]);
 		start.play();	
 	}else	if (state.route === 'question') {
