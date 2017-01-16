@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" name="description" content="Korean Cuisine Quiz App">
+  <title>Korean Cuisine Quiz</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+  <div class="container">
+    
+    <div class="quiz-start hidden">
+      <h1>Korean Cuisine Quiz</h1>
+      <p>This quiz will test your knowlegde about Korean food and drink.</p>
+      <form name="start-game">
+        <button type="submit">Start Quiz</button>
+      </form>
+    </div>
+
+    <div class="question-block hidden">
+      <div class="quiz-status">
+        <div class="question-number">Question <span class="current-question"></span> of 5</div>
+        <div class="quiz-score">Score: <span class="current-score"></span></div>
+      </div>
+
+      <h1>Korean Cuisine Quiz</h1>
+
+      <p class="question-text"></p>
+      <form name="answer-block">
+        <ol type="A" class="answer-list"></ol> 
+        <button type="submit">Submit</button>
+      </form>         
+    </div>
+
+    <div class="feedback-block hidden">
+      <div class="quiz-status">
+        <div class="question-number">Question <span class="current-question"></span> of 5</div>
+        <div class="quiz-score">Score: <span class="current-score"></span></div>
+      </div>
+
+      <h1>Korean Cuisine Quiz</h1>
+      <p class="response"></p>
+      <button type="submit" class="next-question"></button>
+    </div>
+
+    <div class="final-results hidden">
+      <h1>Korean Cuisine Quiz</h1>
+      <p>You got <span class="correct"></span> out of 5 questions correct. Reward yourself with some delicious kimichi.</p>
+      <button type="submit" class="restart-quiz">Restart Quiz</button>
+    </div>
+
+  </div>
+  <!-- link to jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- link to your app.js -->
+  <script src="app.js"></script>
+</body>
+</html>
